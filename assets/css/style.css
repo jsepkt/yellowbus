@@ -442,7 +442,7 @@ hr { border: 0; height: 1px; background-image: linear-gradient(to right, transpa
 .team-size-indicator { font-size: 0.9rem; font-weight: 500; color: var(--neutral-dark); margin-bottom: var(--spacing-sm); display: block; }
 .function-card p { flex-grow: 1; }
 .skills-highlight { display: block; font-size: 0.85rem; font-weight: 600; color: var(--primary-medium); margin-top: auto; padding-top: var(--spacing-sm); border-top: 1px solid var(--neutral-light); }
-#talent-commitment img { max-width: 500px; margin: 0 auto; }
+#talent-commitment img { max-width: 100%; height: auto; } /*updated*/
 .career-categories-grid .h4-style { margin-bottom: var(--spacing-lg); }
 .career-category-card { background-color: var(--neutral-light); padding: var(--spacing-lg) var(--spacing-md); border-radius: var(--border-radius-medium); color: var(--neutral-darkest); box-shadow: var(--shadow-sm); transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast); }
 .career-category-card:hover { background-color: var(--primary-medium); color: var(--neutral-lightest); transform: scale(1.03); }

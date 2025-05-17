@@ -1,0 +1,22 @@
+/* assets/css/charts.css */
+
+/* Styles specifically for Chart.js canvas elements or their unique wrappers,
+   if not adequately covered by .chart-container-wrapper in style.css */
+
+/* Example: If you wanted to add a border directly to all chart canvases */
+/*
+canvas[id*="Chart"] { // Targets canvas elements with "Chart" in their ID
+    border: 1px solid var(--neutral-medium);
+    border-radius: var(--border-radius-soft);
+}
+*/
+
+/* Example: Further styling for the chart container if it's different from other page elements */
+/*
+.chart-container-wrapper {
+    background-color: var(--neutral-lightest); // Already in style.css, just an example
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-lg);
+}
+*/
