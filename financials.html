@@ -1,269 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Projections & Investment - Yellow Bus</title>
-
-    <!-- Preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- AOS for Animations -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-    <!-- Main Stylesheet -->
+    <title>Financials | Yellow Bus</title>
+    <meta name="description"
+        content="Review the financial health and projections of Yellow Bus. Clear path to profitability with strong unit economics and scalable revenue models.">
+    <meta name="keywords"
+        content="financial projections, startup investment, EBITDA, ROI, unit economics, seed round, investor deck">
+    <meta name="author" content="Pillow Gold Developers LLC">
+    <meta property="og:title" content="Financials | Yellow Bus">
+    <meta property="og:description" content="Robust business model delivering 5x ROI over 5 years.">
+    <meta property="og:image" content="assets/images/hero/hero-background-main.jpg">
+    <meta property="og:url" content="https://www.yellowbus.com/financials.html">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Chart Specific Stylesheet -->
-    <link rel="stylesheet" href="assets/css/charts.css">
-
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/common/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
 
-    <header class="site-header" id="site-header">
+    <!-- NAV -->
+    <header id="header">
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="navbar-brand">
-                    <img src="assets/images/common/logo-yellow-bus-dark.png" alt="Yellow Bus Logo" class="logo-main"> <!-- Assuming white logo for dark header -->
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/common/logo-yellow-bus-dark.png" alt="Yellow Bus" style="height: 40px;">
                 </a>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu-main">
-                    <span class="nav-toggle-icon"></span>
-                </button>
-                <ul class="nav-menu" id="nav-menu-main">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="market-analysis.html" class="nav-link">Opportunity</a></li>
-                    <li class="nav-item"><a href="solution-tech.html" class="nav-link">Solution</a></li>
-                    <li class="nav-item"><a href="business-model.html" class="nav-link">Business Model</a></li>
-                    <li class="nav-item"><a href="financials.html" class="nav-link active">Financials</a></li>
-                    <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
-                    <li class="nav-item nav-item-cta"><a href="contact.html" class="btn btn-nav-cta">Invest Now</a></li>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="market.html">Market</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="financials.html" class="active">Financials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.9rem;">Invest
+                    Now</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="page-hero-subtle bg-neutral-light">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle text-primary-dark">The Investment Proposition</h6>
-                    <h1>Driving Returns: Financial Outlook & <span class="text-accent">Investment</span></h1>
-                    <p class="description">A clear view of our financial projections, key metrics, investment requirements, and the attractive returns anticipated for our partners.</p>
-                </div>
-            </div>
-        </section>
+    <!-- HEADER -->
+    <section class="section" style="padding-top: 10rem; padding-bottom: 2rem;">
+        <div class="container text-center">
+            <span class="subtitle">Investment Case</span>
+            <h1>Financial <span class="text-gradient">Projections</span></h1>
+            <p>Our path to profitability is built on unit economics, high asset utilization, and scalable recurring
+                revenue.</p>
+        </div>
+    </section>
 
-        <section class="section" id="investment-ask">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle">Fueling Our Growth</h6>
-                    <h2>Seed Capital Requirement: <span class="text-accent">₹75 Crore</span></h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-                    <div data-aos="fade-right">
-                        <h3 class="h4-style">Strategic Allocation for Phase 1 (100 Buses):</h3>
-                        <p>This initial seed funding will be strategically deployed to build a strong foundation, validate our model in key markets, and achieve early milestones, paving the way for rapid scaling.</p>
-                        <ul class="styled-list-detailed use-of-funds-list">
-                            <li><i class="fas fa-bus-alt text-primary-medium"></i><div><strong>₹55 Cr: Fleet Acquisition & Setup</strong><span>Initial procurement of a mixed fleet (avg. ₹55 Lakhs/bus), depot setup, initial spares & tooling.</span></div></li>
-                            <li><i class="fas fa-cogs text-primary-medium"></i><div><strong>₹10 Cr: Technology Platform & IP</strong><span>Final development, enhancement of proprietary software, mobile apps, and server infrastructure.</span></div></li>
-                            <li><i class="fas fa-bullhorn text-primary-medium"></i><div><strong>₹5 Cr: Marketing & Launch Expenses</strong><span>Brand building, initial customer acquisition campaigns in target cities, PR activities.</span></div></li>
-                            <li><i class="fas fa-briefcase text-primary-medium"></i><div><strong>₹5 Cr: 12-Month Operational Runway</strong><span>Working capital for salaries, initial operational costs, and contingency buffer.</span></div></li>
-                        </ul>
-                        <p class="mt-lg"><strong>Equity Offered:</strong> 25% (Negotiable based on final due diligence and strategic value).</p>
-                    </div>
-                                        <div data-aos="fade-left" data-aos-delay="150" class="chart-container-wrapper pie-chart-container">
-                         <canvas id="useOfFundsPieChart"></canvas>
-                         <p class="text-small text-center text-muted mt-sm"><em>Strategic Deployment of ₹75 Cr Seed Capital.</em></p>
-                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section bg-neutral-light" id="key-assumptions">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle">Our Projections Underpinnings</h6>
-                    <h2>Key Financial <span class="text-accent">Assumptions</span></h2>
-                    <p class="description">Our financial model is built on realistic market assessments, operational efficiencies, and conservative growth estimates.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 assumption-cards">
-                    <div class="assumption-card" data-aos="fade-up"><div class="assumption-icon"><i class="fas fa-users"></i></div><h4>Occupancy Rates</h4><p>Average 75-80% across fleet (post-stabilization on routes). Peak hour routes >90%.</p></div>
-                    <div class="assumption-card" data-aos="fade-up" data-aos-delay="100"><div class="assumption-icon"><i class="fas fa-rupee-sign"></i></div><h4>ARPU (Subscription)</h4><p>Average ₹2,800 - ₹3,200 per month per subscriber, varying by city and subscription tier.</p></div>
-                    <div class="assumption-card" data-aos="fade-up" data-aos-delay="200"><div class="assumption-icon"><i class="fas fa-user-plus"></i></div><h4>Customer Acquisition Cost (CAC)</h4><p>Target blended CAC of ₹1,000 - ₹1,500 through digital marketing and B2B partnerships.</p></div>
-                    <div class="assumption-card" data-aos="fade-up" data-aos-delay="300"><div class="assumption-icon"><i class="fas fa-bus"></i></div><h4>Fleet Deployment</h4><p>Phased deployment: 50 buses (Yr1), 100 (Yr2), 200 (Yr3), scaling to 800+ by Year 7.</p></div>
-                    <div class="assumption-card" data-aos="fade-up" data-aos-delay="400"><div class="assumption-icon"><i class="fas fa-gas-pump"></i></div><h4>Operational Costs</h4><p>Fuel, driver salaries, maintenance benchmarked against industry standards, optimized via tech.</p></div>
-                    <div class="assumption-card" data-aos="fade-up" data-aos-delay="500"><div class="assumption-icon"><i class="fas fa-percentage"></i></div><h4>Churn Rate (Subscription)</h4><p>Projected monthly churn of <5% post-initial adoption, driven by high service quality.</p></div>
-                </div>
-                <p class="text-center mt-xl text-muted" data-aos="fade-up"><em>Detailed financial model with sensitivity analysis available in the full investor pitch deck.</em></p>
-            </div>
-        </section>
-
-        <section class="section" id="financial-projections-table">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle">The Numbers Speak</h6>
-                    <h2>7-Year Financial <span class="text-accent">Snapshot</span></h2>
-                    <p class="description">Illustrative projections showcasing strong revenue growth, profitability, and attractive returns. (All figures in ₹ Crores)</p>
-                </div>
-                <div class="export-buttons-wrapper text-right mb-md" data-aos="fade-up">
-                    <button onclick="exportTableToCSV('financial-data-table-main', 'YellowBus_Financial_Projections_CSV')" class="btn btn-outline-dark btn-sm"><i class="fas fa-file-csv"></i> Export CSV</button>
-                    <button onclick="exportTableToExcel('financial-data-table-main', 'YellowBus_Financial_Projections')" class="btn btn-outline-dark btn-sm"><i class="fas fa-file-excel"></i> Export Excel</button>
-                    <button onclick="exportTableToPDF('financial-data-table-main', 'YellowBus_Financial_Projections')" class="btn btn-outline-dark btn-sm"><i class="fas fa-file-pdf"></i> Export PDF</button>
-                </div>
-                <div class="table-wrapper-styled" data-aos="fade-up">
-                    <table class="financial-table-main" id="financial-data-table-main">
-                        <thead><tr><th>Metric / Year</th><th>Year 1</th><th>Year 2</th><th>Year 3</th><th>Year 4</th><th>Year 5</th><th>Year 6</th><th>Year 7</th></tr></thead>
-                        <tbody>
-                            <tr><td>Fleet Size (Active)</td><td>50</td><td>100</td><td>200</td><td>350</td><td>500</td><td>650</td><td>800</td></tr>
-                            <tr><td>Revenue</td><td>15</td><td>43</td><td>90</td><td>160</td><td>250</td><td>330</td><td>420</td></tr>
-                            <tr><td>COGS (Direct OpEx)</td><td>12</td><td>28</td><td>55</td><td>95</td><td>140</td><td>180</td><td>220</td></tr>
-                            <tr><td>Gross Profit</td><td>3</td><td>15</td><td>35</td><td>65</td><td>110</td><td>150</td><td>200</td></tr>
-                            <tr><td>SG&A (Indirect OpEx)</td><td>6</td><td>7</td><td>10</td><td>15</td><td>20</td><td>30</td><td>40</td></tr>
-                            <tr><td><strong>EBITDA</strong></td><td><strong>-3</strong></td><td><strong>8</strong></td><td><strong>25</strong></td><td><strong>50</strong></td><td><strong>90</strong></td><td><strong>120</strong></td><td><strong>160</strong></td></tr>
-                            <tr><td>Depreciation & Amort.</td><td>2</td><td>4</td><td>8</td><td>14</td><td>20</td><td>26</td><td>32</td></tr>
-                            <tr><td>Interest (Illustrative)</td><td>1</td><td>1.5</td><td>2</td><td>2.5</td><td>3</td><td>3.5</td><td>4</td></tr>
-                            <tr><td>Profit Before Tax (PBT)</td><td>-6</td><td>2.5</td><td>15</td><td>33.5</td><td>67</td><td>90.5</td><td>124</td></tr>
-                            <tr><td>Tax (Est. @25%)</td><td>0</td><td>0.6</td><td>3.7</td><td>8.4</td><td>16.7</td><td>22.6</td><td>31</td></tr>
-                            <tr><td><strong>Net Profit (PAT)</strong></td><td><strong>-6</strong></td><td><strong>1.9</strong></td><td><strong>11.3</strong></td><td><strong>25.1</strong></td><td><strong>50.3</strong></td><td><strong>67.9</strong></td><td><strong>93</strong></td></tr>
-                            <tr><td>EBITDA Margin %</td><td>-20%</td><td>18.6%</td><td>27.8%</td><td>31.3%</td><td>36.0%</td><td>36.4%</td><td>38.1%</td></tr>
-                            <tr><td>Net Profit Margin %</td><td>-40%</td><td>4.4%</td><td>12.5%</td><td>15.7%</td><td>20.1%</td><td>20.6%</td><td>22.1%</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <section class="section bg-neutral-light" id="unit-economics-kpis">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle">Metrics That Matter</h6>
-                    <h2>Strong Unit Economics & <span class="text-accent">Key KPIs</span> (Projected Year 3-5 Avg.)</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 kpi-highlight-cards">
-                    <div class="kpi-card-styled" data-aos="fade-up"><div class="kpi-icon-bg"><i class="fas fa-bus-alt"></i></div><h4>Revenue/Bus/Month</h4><p class="kpi-value">₹3.5 - ₹4 Lakhs</p><span class="kpi-desc">Post route stabilization</span></div>
-                    <div class="kpi-card-styled" data-aos="fade-up" data-aos-delay="100"><div class="kpi-icon-bg"><i class="fas fa-user-check"></i></div><h4>CLTV (Customer Lifetime Value)</h4><p class="kpi-value">₹35,000+</p><span class="kpi-desc">Based on avg. 12-18 month subscription</span></div>
-                    <div class="kpi-card-styled" data-aos="fade-up" data-aos-delay="200"><div class="kpi-icon-bg"><i class="fas fa-hand-holding-usd"></i></div><h4>CAC (Customer Acq. Cost)</h4><p class="kpi-value">₹1,200 - ₹1,500</p><span class="kpi-desc">Blended across channels</span></div>
-                    <div class="kpi-card-styled" data-aos="fade-up" data-aos-delay="300"><div class="kpi-icon-bg"><i class="fas fa-recycle"></i></div><h4>CLTV/CAC Ratio</h4><p class="kpi-value">> 20X</p><span class="kpi-desc">Indicating high ROI on acquisition</span></div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl mt-xxl">
-                    <div class="chart-container-wrapper" data-aos="fade-up">
-                        <canvas id="financialsRevenueGrowthChart"></canvas>
-                        <p class="text-small text-center text-muted mt-sm"><i>Projected Annual Revenue Growth (Years 1-7)</i></p>
-                    </div>
-                    <div class="chart-container-wrapper" data-aos="fade-up" data-aos-delay="150">
-                        <canvas id="financialsProfitabilityTrendChart"></canvas> <!-- Added this canvas ID -->
-                        <p class="text-small text-center text-muted mt-sm"><i>Projected EBITDA & Net Profit Trend (Years 1-7)</i></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="investor-returns">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h6 class="subtitle">The Upside</h6>
-                    <h2>Attractive Investor Returns & <span class="text-accent">Exit Pathways</span></h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
-                    <div data-aos="fade-right">
-                        <h3 class="h4-style">Projected Returns for Seed Investors:</h3>
-                        <ul class="styled-list-detailed">
-                            <li><i class="fas fa-chart-line text-success"></i><div><strong>Target ROI: 5X - 7X Multiple</strong><span>Within a 5-7 year timeframe, based on successful execution and market conditions.</span></div></li>
-                            <li><i class="fas fa-percentage text-success"></i><div><strong>Preferred Returns:</strong> 1.5X non-participating preference until capital + preference returned (typical for seed rounds).</div></li>
-                            <li><i class="fas fa-users-cog text-success"></i><div><strong>Board Seat / Observer Rights:</strong> Ensuring alignment and transparency.</div></li>
-                        </ul>
-                    </div>
-                    <div data-aos="fade-left" data-aos-delay="150">
-                        <h3 class="h4-style">Potential Exit Scenarios:</h3>
-                        <ul class="styled-list-detailed">
-                            <li><i class="fas fa-industry text-primary-medium"></i><div><strong>Strategic Acquisition:</strong> By larger domestic or international transport, logistics, or mobility tech companies.</div></li>
-                            <li><i class="fas fa-compress-arrows-alt text-primary-medium"></i><div><strong>Merger:</strong> With complementary players to create a larger, more dominant entity.</div></li>
-                            <li><i class="fas fa-university text-primary-medium"></i><div><strong>Initial Public Offering (IPO):</strong> Long-term (7-10 years) possibility on Indian stock exchanges as market leader.</div></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="text-center mt-xxl" data-aos="fade-up">
-                    <a href="contact.html" class="btn btn-accent btn-lg">Discuss Investment Details <i class="fas fa-comments-dollar"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer-main bg-primary-dark">
+    <!-- KPIS -->
+    <section class="section" style="padding: 2rem 0;">
         <div class="container">
-            <div class="footer-content-grid">
-                <div class="footer-column footer-about">
-                    <a href="index.html" class="footer-logo-link">
-                        <img src="assets/images/common/logo-yellow-bus-dark.png" alt="Yellow Bus Logo" class="footer-logo-img"> <!-- Assuming white logo -->
-                    </a>
-                    <p class="footer-tagline">Revolutionizing urban mobility across India. Driving the future, sustainably.</p>
-                    <div class="footer-social-icons">
-                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="AngelList" target="_blank" rel="noopener noreferrer"><i class="fab fa-angellist"></i></a>
-                    </div>
+            <div class="grid grid-4">
+                <div class="card text-center">
+                    <h3 class="text-gold">₹75 Cr</h3>
+                    <p class="text-muted">Seed Round Ask</p>
                 </div>
-                <div class="footer-column">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="market-analysis.html">The Opportunity</a></li>
-                        <li><a href="solution-tech.html">Our Solution</a></li>
-                        <li><a href="business-model.html">Business Model</a></li>
-                        <li><a href="financials.html">Financial Projections</a></li>
-                        <li><a href="team.html">Our Team</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
+                <div class="card text-center">
+                    <h3 class="text-gold">38%</h3>
+                    <p class="text-muted">Year 7 EBITDA</p>
                 </div>
-                <div class="footer-column">
-                    <h5>Get In Touch</h5>
-                    <ul class="footer-contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> 1004 Meadow Hill St, Denton TX USA 76209</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+19402188709">+1 (940) 218-8709</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:admin@pillowgold.com">admin@pillowgold.com</a></li>
-                    </ul>
+                <div class="card text-center">
+                    <h3 class="text-gold">20X</h3>
+                    <p class="text-muted">LTV/CAC Ratio</p>
                 </div>
-                <div class="footer-column footer-newsletter">
-                    <h5>Stay Updated</h5>
-                    <p>Get the latest news and insights from Yellow Bus.</p>
-                    <form action="#" class="newsletter-form">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit" class="btn btn-accent-small">Subscribe</button>
-                    </form>
+                <div class="card text-center">
+                    <h3 class="text-gold">500+</h3>
+                    <p class="text-muted">Year 5 Fleet</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© <span id="currentYear"></span> Yellow Bus Transportation Pvt. Ltd. All rights reserved.</p>
-                <div class="footer-legal-links">
-                  <a href="terms-of-service.html">Terms of Service</a> | 
-                  <a href="privacy-policy.html">Privacy Policy</a> | 
-                  <a href="investor-disclaimer.html">Investor Disclaimer</a>
+        </div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="section">
+        <div class="container">
+            <!-- Row 1: Growth & Profitability -->
+            <div class="grid grid-2">
+                <div class="card">
+                    <h4>Revenue Growth (₹ Cr)</h4>
+                    <div style="height: 300px;">
+                        <canvas id="financialsRevenueGrowthChart"></canvas>
+                    </div>
                 </div>
+                <div class="card">
+                    <h4>Profitability Trend (EBITDA vs PAT)</h4>
+                    <div style="height: 300px;">
+                        <canvas id="financialsProfitabilityTrendChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Use of Funds & Table -->
+            <div class="grid grid-2" style="margin-top: 2rem;">
+                <div class="card">
+                    <h4>Use of Funds (Seed Round)</h4>
+                    <div style="height: 300px; display: flex; justify-content: center;">
+                        <canvas id="useOfFundsPieChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h4 style="margin-bottom: 0;">7-Year Financial Snapshot</h4>
+                        <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;"><i
+                                class="fas fa-download"></i> CSV</button>
+                    </div>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; min-width: 100%;">
+                            <thead style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <tr style="text-align: left; color: var(--accent-gold);">
+                                    <th style="padding: 0.8rem;">Metric</th>
+                                    <th style="padding: 0.8rem;">Y1</th>
+                                    <th style="padding: 0.8rem;">Y3</th>
+                                    <th style="padding: 0.8rem;">Y5</th>
+                                    <th style="padding: 0.8rem;">Y7</th>
+                                </tr>
+                            </thead>
+                            <tbody style="color: var(--text-body); font-size: 0.9rem;">
+                                <tr>
+                                    <td style="padding: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                        Revenue</td>
+                                    <td style="padding: 0.8rem;">15</td>
+                                    <td style="padding: 0.8rem;">90</td>
+                                    <td style="padding: 0.8rem;">250</td>
+                                    <td style="padding: 0.8rem;">420</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05);">EBITDA
+                                    </td>
+                                    <td style="padding: 0.8rem; color: #EF4444;">-3</td>
+                                    <td style="padding: 0.8rem;">25</td>
+                                    <td style="padding: 0.8rem;">90</td>
+                                    <td style="padding: 0.8rem;">160</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05);">Net
+                                        Profit</td>
+                                    <td style="padding: 0.8rem; color: #EF4444;">-6</td>
+                                    <td style="padding: 0.8rem;">11</td>
+                                    <td style="padding: 0.8rem;">50</td>
+                                    <td style="padding: 0.8rem;">93</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4" style="gap: 2rem;">
+                <div>
+                    <img src="assets/images/common/logo-yellow-bus-dark.png" alt="Yellow Bus"
+                        style="height: 30px; margin-bottom: 1rem;">
+                    <p class="text-muted text-small">Revolutionizing daily commute with premium comfort and technology.
+                    </p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li><a href="market.html" style="color: var(--text-muted); text-decoration: none;">Market</a>
+                        </li>
+                        <li><a href="technology.html"
+                                style="color: var(--text-muted); text-decoration: none;">Technology</a></li>
+                        <li><a href="financials.html"
+                                style="color: var(--text-muted); text-decoration: none;">Financials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li><a href="team.html" style="color: var(--text-muted); text-decoration: none;">Our Team</a>
+                        </li>
+                        <li><a href="contact.html" style="color: var(--text-muted); text-decoration: none;">Contact</a>
+                        </li>
+                        <li><a href="privacy-policy.html"
+                                style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html"
+                                style="color: var(--text-muted); text-decoration: none;">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li style="color: var(--text-muted); margin-bottom: 0.5rem;"><i
+                                class="fas fa-map-marker-alt text-gold" style="width: 20px;"></i> Denton, Texas, 76209
+                            USA</li>
+                        <li style="color: var(--text-muted); margin-bottom: 0.5rem;"><i
+                                class="fas fa-envelope text-gold" style="width: 20px;"></i> info@pillowgold.com</li>
+                        <li style="color: var(--text-muted); margin-bottom: 0.5rem;"><i class="fas fa-phone text-gold"
+                                style="width: 20px;"></i> +1 (940) 218-8709</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-muted"
+                style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; text-align: center;">
+                &copy; <span id="year-span"></span> Yellow Bus, a product of Pillow Gold Developers LLC.
             </div>
         </div>
     </footer>
 
-    <a href="#site-header" id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-<!-- At the end of financials.html <body>, BEFORE your other script tags -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    
-    <!-- EXPORT LIBRARIES - ENSURE THESE ARE PRESENT AND LOADED -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
-
-    <!-- Your Custom Scripts -->
+    <script src="assets/js/charts-financials.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/charts-financials.js"></script> 
-</body></body>
+</body>
+
 </html>
